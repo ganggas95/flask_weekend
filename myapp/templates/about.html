@@ -1,0 +1,32 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<h1>About Me</h1>
+
+<!-- Render Dictionary-->
+
+<span>First Name : {{ profile.firstname }}</span>
+<br>
+<span>Last Name : {{ profile.lastname }}</span>
+<br>
+<span>Nick Name : {{ profile.nickname }}</span>
+<br>
+<span>Address :{{ profile.address }}</span>
+<br>
+<span>Email : {{ profile.email }}</span>
+<br>
+<span>Work : {{ profile.work }}</span>
+<br>
+
+<!-- Render List-->
+<h3>My Project</h3>
+
+<ul>
+{% for project in projects%}
+
+<li> {{ project }} </li>
+
+{% endfor %}
+</ul>
+{% endblock %}
